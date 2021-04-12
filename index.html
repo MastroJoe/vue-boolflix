@@ -12,7 +12,70 @@
 </head>
 <body>
   <div id="root">
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar-left">
+            <ul>
+              <li class="logo">
+                <img src="assets/img/logo-boolflix.png" alt="logo">
+              </li>
+              <li>
+                <a href="#">
+                  <p>Film</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p>Serie TV</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- ricerca e filtro film  -->
+          <div class="navbar-midd">
+            <!-- input ricerca -->
+            <div class="search">
+              <input type="text" name value placeholder="Film, Serie TV...">
+              <button type="button" name="search">
+                <i class="fas fa-search"></i>
+              </button>
+              <!-- filtro film e serie TV -->
+              <select class="genre" name="genre">
+                <option value="all">Tutti</option>
+                <option value="all">Tutti</option>
+                <option value="all">Tutti</option>
+              </select>
+            </div>
+          </div>
+          <!-- utente e selezione lingua -->
+          <div class="navbar-right">
+            <ul>
+              <!-- selezione lingua -->
+              <li class="language">
+                <select class="language" name="language">
+                  <option value="italian">Italiano</option>
+                  <option value="italian">Italiano</option>
+                  <option value="italian">Italiano</option>
+                </select>
+              </li>
+              <li class="user">
+                <a href="#">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="user">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- risultati della ricerca -->
+    <main>
 
+    </main>
+    <footer>
+
+    </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
