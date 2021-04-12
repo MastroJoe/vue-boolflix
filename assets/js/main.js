@@ -6,11 +6,5 @@ var app = new Vue(
     data: {
 
     },
-    mounted() {
-      axios.get('')
-      .then((response) => {
-
-      });
-    }
   }
 );
