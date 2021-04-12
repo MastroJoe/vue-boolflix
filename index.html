@@ -36,9 +36,14 @@
           <div class="navbar-midd">
             <!-- input ricerca -->
             <div class="search">
-              <input type="text" name value placeholder="Film, Serie TV...">
+              <input type="text"
+                     name value placeholder="Film, Serie TV..."
+                     v-model="input"
+                     v-on:keyup.enter="search">
               <button type="button" name="search">
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search"
+                   @click="search"
+                ></i>
               </button>
               <!-- filtro film e serie TV -->
               <select class="genre" name="genre">
@@ -54,9 +59,9 @@
               <!-- selezione lingua -->
               <li class="language">
                 <select class="language" name="language">
-                  <option value="italian">ITA</option>
-                  <option value="italian">ITA</option>
-                  <option value="italian">ITA</option>
+                  <option value="italian">IT</option>
+                  <option value="english">EN</option>
+                  <option value="spanish">ES</option>
                 </select>
               </li>
               <li class="user">
@@ -71,7 +76,17 @@
     </header>
     <!-- risultati della ricerca -->
     <main>
-
+      <div class="container-results">
+        <ul class="results">
+          <li v-for="result in research">
+            Titolo: {{ result.title }} - Titolo Originale: {{ result.original_title }}
+            <br>
+            Lingua Originale: {{ result.original_language }}
+            <br>
+            Voto: {{ result.vote_average }}>
+          </li>
+        </ul>
+      </div>
     </main>
     <footer>
 
