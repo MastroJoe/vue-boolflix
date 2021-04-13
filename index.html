@@ -85,7 +85,10 @@
             <br>
             <p>Titolo Originale: {{ getOriginalTitle(result) }}</p>
             <br>
-            <p>Lingua Originale: {{ result.original_language }}</p>
+            <p>Lingua Originale:
+              <!-- link del flag della lingua -->
+              <img class="flag" :src="`https://www.unknown.nu/flags/images/${result.original_language}-100`">
+            </p>
             <br>
             <p>Voto: {{ result.vote_average }}></p>
           </li>

@@ -93,3 +93,7 @@ main {
   margin: 1em 20px;
   background-color: tomato;
 }
+
+.flag {
+  width: 30px;
+}
