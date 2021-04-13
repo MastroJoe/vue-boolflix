@@ -38,7 +38,7 @@
             <div class="search">
               <input type="text"
                      name value placeholder="Film, Serie TV..."
-                     v-model="input"
+                     v-model="query"
                      v-on:keyup.enter="search">
               <button type="button" name="search">
                 <i class="fas fa-search"
@@ -47,6 +47,8 @@
               </button>
               <!-- filtro film e serie TV -->
               <select class="genre" name="genre">
+                <option value="all">Tutti</option>
+                <option value="all">Tutti</option>
                 <option value="all">Tutti</option>
                 <option value="all">Tutti</option>
                 <option value="all">Tutti</option>
@@ -79,7 +81,7 @@
       <div class="container-results">
         <ul class="results">
           <li v-for="result in research">
-            Titolo: {{ result.title }} - Titolo Originale: {{ result.original_title }}
+            Titolo: {{ getTitle(result) }} - Titolo Originale: {{ getOriginalTitle(result) }}
             <br>
             Lingua Originale: {{ result.original_language }}
             <br>
