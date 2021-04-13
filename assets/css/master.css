@@ -103,3 +103,8 @@ main {
   height: 100%;
   background-repeat: no-repeat;
 }
+
+.stars i {
+  color: #ffffff;
+  font-size: 25px;
+}
