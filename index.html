@@ -47,7 +47,7 @@
               </button>
               <!-- filtro film e serie TV -->
               <select class="genre" name="genre">
-                <option value="all">Tutti</option>
+                <option value="genre">Genere</option>
                 <option value="all">Tutti</option>
                 <option value="all">Tutti</option>
                 <option value="all">Tutti</option>
@@ -78,14 +78,16 @@
     </header>
     <!-- risultati della ricerca -->
     <main>
-      <div class="container-results">
-        <ul class="results">
+      <div class="container-cards">
+        <ul class="cards">
           <li v-for="result in research">
-            Titolo: {{ getTitle(result) }} - Titolo Originale: {{ getOriginalTitle(result) }}
+            <p>Titolo: {{ getTitle(result) }}</p>
             <br>
-            Lingua Originale: {{ result.original_language }}
+            <p>Titolo Originale: {{ getOriginalTitle(result) }}</p>
             <br>
-            Voto: {{ result.vote_average }}>
+            <p>Lingua Originale: {{ result.original_language }}</p>
+            <br>
+            <p>Voto: {{ result.vote_average }}></p>
           </li>
         </ul>
       </div>

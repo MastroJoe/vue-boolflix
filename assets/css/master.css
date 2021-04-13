@@ -62,6 +62,7 @@ body {
 
 .user img {
   height: 50px;
+  border-radius: 50%;
 }
 
 /* main */
@@ -71,13 +72,24 @@ main {
   padding-top: 100px;
 }
 
-.container-results {
+.container-cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: #ffffff;
 }
 
-.results li {
-  margin: 10px ;
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px calc((100% - (255px * 3)) / 2);
+}
+
+.cards li {
+  height: 260px;
+  flex: 0 0 215px;
+  margin: 1em 20px;
+  background-color: tomato;
 }

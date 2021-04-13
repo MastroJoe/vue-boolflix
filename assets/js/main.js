@@ -16,6 +16,7 @@ var app = new Vue (
       search: function(){
         // verifica input utente
         if (this.query != '') {
+          this.research = [];
           // Chiamata axios per film e serie TV da input utente
           axios.get(`${this.uri}/search/movie?api_key=${this.api_key}&query=${this.query}&language=${this.lang}`)
           .then((response) => {
@@ -27,6 +28,7 @@ var app = new Vue (
             this.research = [...this.research, ...response.data.results];
           });
         } else {
+          this.research = [];
         }
       },
       // funzione che prende il titolo del film e serie TV
