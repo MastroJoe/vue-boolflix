@@ -85,7 +85,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 40px calc((100% - (255px * 3)) / 2);
+  padding: 10px calc((100% - (340px * 3)) / 3);
 }
 
 .cards li {
@@ -145,7 +145,8 @@ main {
 }
 
 .flip-box-back {
-  background-color: #555;
+  background-color: #242424;
+  opacity: 0.8;
   color: #ffffff;
   transform: rotateY(180deg);
 }
