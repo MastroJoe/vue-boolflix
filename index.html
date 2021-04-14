@@ -94,12 +94,14 @@
                 </p>
                 <br>
                 <!-- rating stars -->
-                <div v-html="stars">
+                <div class="star">
+                  Voto:
+                  <i v-for="star in parseInt(result.vote_average / 2)"
+                     class="fas fa-star"></i>
+                  <i v-for="star in (5 - parseInt(result.vote_average / 2))"
+                     class="far fa-star"></i>
                 </div>
-                <div class="rate">
-                  {{ result.vote_average}}
-                </div>
-              </div>
+                <!-- <p class="rate"> {{ parseInt(result.vote_average / 2) }}</p> -->
               </div>
             </div>
           </li>
