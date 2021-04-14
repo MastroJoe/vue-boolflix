@@ -76,32 +76,38 @@
         </div>
       </div>
     </header>
-    <!-- risultati della ricerca -->
+    <!-- sezione risultati ricerca -->
     <main>
       <div class="container-cards">
         <ul class="cards">
+          <!-- hover cards dei risultati -->
           <li v-for="result in research">
-            <div class="cards-front"
-                 :style="`background-image: url('https://image.tmdb.org/t/p/w200/${result.poster_path}')`">
-              <div class="info">
-                <p>Titolo: {{ getTitle(result) }}</p>
-                <br>
-                <p>Titolo Originale: {{ getOriginalTitle(result) }}</p>
-                <br>
-                <p>Lingua Originale:
-                  <!-- link del flag della lingua -->
-                  <img class="flag" :src="`https://www.unknown.nu/flags/images/${result.original_language}-100`">
-                </p>
-                <br>
-                <!-- rating stars -->
-                <div class="star">
-                  Voto:
-                  <i v-for="star in parseInt(result.vote_average / 2)"
-                     class="fas fa-star"></i>
-                  <i v-for="star in (5 - parseInt(result.vote_average / 2))"
-                     class="far fa-star"></i>
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="cards-front flip-box-front"
+                     :style="`background-image: url('https://image.tmdb.org/t/p/w200/${result.poster_path}')`">
                 </div>
-                <!-- <p class="rate"> {{ parseInt(result.vote_average / 2) }}</p> -->
+                <div class="cards-back flip-box-back">
+                  <p>Titolo: {{ getTitle(result) }}</p>
+                  <br>
+                  <p>Titolo Originale: {{ getOriginalTitle(result) }}</p>
+                  <br>
+                  <p>Lingua Originale:
+                    <!-- link del flag della lingua -->
+                    <img class="flag" :src="`https://www.unknown.nu/flags/images/${result.original_language}-100`">
+                  </p>
+                  <br>
+                  <!-- rating stars -->
+                  <div class="star">
+                    <p>Voto:
+                      <i v-for="star in parseInt(result.vote_average / 2)"
+                         class="fas fa-star"></i>
+                      <i v-for="star in (5 - parseInt(result.vote_average / 2))"
+                         class="far fa-star"></i>
+                    </p>
+                  </div>
+                  <!-- <p class="rate"> {{ parseInt(result.vote_average / 2) }}</p> -->
+                </div>
               </div>
             </div>
           </li>
