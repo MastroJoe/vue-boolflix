@@ -82,7 +82,7 @@
         <ul class="cards">
           <li v-for="result in research">
             <div class="cards-front"
-                 :style="`background-image: url('https://image.tmdb.org/t/p/w200/${result.poster_path}')`">>
+                 :style="`background-image: url('https://image.tmdb.org/t/p/w200/${result.poster_path}')`">
               <div class="info">
                 <p>Titolo: {{ getTitle(result) }}</p>
                 <br>
@@ -93,11 +93,11 @@
                   <img class="flag" :src="`https://www.unknown.nu/flags/images/${result.original_language}-100`">
                 </p>
                 <br>
-                <div class="stars">
-                  <i class="fas fa-star"
-                     v-for="star in starsRate(result.rate_average)"></i>
-                  <i class="far fa-star"
-                     v-for="star in starsAverage(result.rate_average)"></i>
+                <!-- rating stars -->
+                <div v-html="stars">
+                </div>
+                <div class="rate">
+                  {{ result.vote_average}}
                 </div>
               </div>
               </div>

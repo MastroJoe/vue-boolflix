@@ -9,7 +9,7 @@ var app = new Vue (
       lang: 'IT',
       api_key: '5c84cd901d12758e8354438597cfa2b2',
       uri: 'https://api.themoviedb.org/3',
-      stars: '',
+      stars: '<i class="fas fa-star"></i>',
     },
 
     methods: {
@@ -47,14 +47,6 @@ var app = new Vue (
         } else {
           return obj.original_name;
         }
-      },
-      //
-      starsRate: function(rate){
-  
-      },
-      //
-      starsAverage: function(rate){
-
       },
     }
 });
