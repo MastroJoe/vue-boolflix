@@ -85,14 +85,18 @@
             <div class="flip-box">
               <div class="flip-box-inner">
                 <div class="cards-front flip-box-front"
+                     v-if="result.poster_path"
                      :style="`background-image: url('https://image.tmdb.org/t/p/w200/${result.poster_path}')`">
                 </div>
+                <div class="cards-front flip-box-front placeholder"
+                     v-else style="background-image: url('https://ofilmdb.com/assets/img/cover.jpg')">
+                </div>
                 <div class="cards-back flip-box-back">
-                  <p>Titolo: {{ getTitle(result) }}</p>
+                  <p> {{ getTitle(result) }}</p>
                   <br>
                   <p>Titolo Originale: {{ getOriginalTitle(result) }}</p>
                   <br>
-                  <p>Lingua Originale:
+                  <p>
                     <!-- link del flag della lingua -->
                     <img class="flag" :src="`https://www.unknown.nu/flags/images/${result.original_language}-100`">
                   </p>
